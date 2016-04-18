@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+
+    <div class="container content">
+      <header>
+         <h1><a href="{% if jekyll.environment == "production" %}/{% else %}{{ site.baseurl }}/{% endif %}" title="Home">FIRSTwiki</a>
+          <small>{{ site.tagline }}</small>
+        </h1>
+        
+        <!-- TODO: this needs vast improvement -->
+        <nav class="navbar">
+          <ul class="nav nav-tabs">
+              <li><a href="/news/">News</a></li>
+              <li class="dropdown">
+                  <a data-target="#" href="/frcteams/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FRC Teams<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      {% for num in site.data.teamdata.teamidx.frc %}
+                          <li><a href="/frc{{ num }}/">{{ num }}'s</a></li>
+                      {% endfor %}
+                  </ul>
+              </li>
+              <li><a href="/wiki/">wiki</a></li>
+              <li><a href="/docs/">Docs</a></li>
+              
+          {% for n in site.data.menu.items %}
+            <li><a href="{{ n[1] }}">{{ n[0] }}</a></li>
+          {% endfor %}
+          </ul>
+        </nav>        
+      </header>
+
+      <main>
+        {{ content }}
+      </main>
+
+      <hr>
+
+      <footer class="footer">
+        <small>
+          <a href="/docs/about/">About</a> |
+          <a href="/docs/contributing/">Contributing</a> |
+          <a href="/docs/terms/">Terms of use</a> | 
+          Content is available under <a href="http://www.gnu.org/licenses/fdl-1.3.en.html">GNU Free Documentation License 1.3</a><br/>
+          &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time> FIRSTwiki.
+        </small>
+      </footer>
+    </div>
+
+  </body>
+    
+</html>

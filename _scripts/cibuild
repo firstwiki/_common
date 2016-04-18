@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -e # halt script on error
+
+bundle exec jekyll build
+
+# TODO: would like to use this, but need a clever way for validation to work
+#       across multiple repos
+#bundle exec htmlproofer ./_site --disable-external

@@ -1,0 +1,51 @@
+---
+layout: page
+---
+
+{%comment%}
+    TODO: push this off to the right like wikipedia
+{%endcomment%}
+
+{% assign team = page.team %}
+
+<div class="panel panel-default" style="width: 300px">
+    <div class="panel-heading">{{ team.name }}</div>
+    <table class="table">
+        <tr><td>Rookie Year:</td><td>{{ team.rookie_year }}</td></tr>
+        <tr><td>Location</td><td>{{ team.location }}</td></tr>
+        {% if team.district %}
+            <tr><td>District</td><td>{{ team.district }}</td></tr>
+        {% endif %}
+    </table>
+    <ul class="list-group">
+        {% for link in team.links %}
+            <li class="list-group-item"><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+        {% endfor %}
+        <li class="list-group-item"><a href="http://www.thebluealliance.com/team/{{ team.number }}">The Blue Alliance</a></li>
+    </ul>
+</div>
+
+{{ content }}
+
+<!-- TODO: convert this to a per-year type of data display instead of just code-specific? -->
+{% if page.robot_code %}
+    <div class="panel panel-default" style="width: 300px">
+        <div class="panel-heading">Published Robot Code</div>
+        <table class="table">
+            {% assign robot_code = page.robot_code | sort %}
+            {% for yeardata in robot_code reversed %}
+                <tr><td>{{ yeardata[0] }}</td><td>
+                    <ul>
+                        {% for code_list in yeardata[1] %}
+                            {% for code in code_list %}
+                                <li><a href="{{ code[1][0] }}">{{ code[0] }} ({{ code[1][1]}})</a></li>
+                            {% endfor %}
+                        {% endfor %}
+                    </ul>
+                </td></tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endif %}
+
+{% include teams_index.html %}

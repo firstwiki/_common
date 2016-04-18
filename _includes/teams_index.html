@@ -1,0 +1,12 @@
+{%comment%}
+    Shows a list of all possible teams, in 1000 team chunks.
+{%endcomment%}
+
+<nav>
+    <ul class="pagination">
+        {% for num in site.data.teamdata.teamidx[page.collection] %}
+            <li class=""><a href="/{{ page.collection }}{{ num }}/">{{ num }}'s</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+

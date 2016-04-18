@@ -1,0 +1,41 @@
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    {% if page.title == "Home" %}
+      {{ site.title }} &middot; {{ site.tagline }}
+    {% else %}
+      {{ page.title }} &middot; {{ site.title }}
+    {% endif %}
+  </title>
+
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  
+  
+{% if jekyll.environment == "production" %}
+  <!-- <link rel="stylesheet" href="/common/css/poole.css"> -->
+  <link rel="stylesheet" href="/common/css/syntax.css">
+{% else %}
+  <!-- <link rel="stylesheet" href="{{ site.baseurl }}/common/css/poole.css"> -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/common/css/syntax.css">
+{% endif %}
+  
+  <!-- Icons (TODO) -->
+  <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}public/apple-touch-icon-precomposed.png"> -->
+  <!-- <link rel="shortcut icon" href="{{ site.baseurl }}public/favicon.ico"> -->
+  
+</head>
+
+<script>
+  $(document).ready(function(){
+    $('.dropdown-toggle').dropdown();
+  });
+</script>
+

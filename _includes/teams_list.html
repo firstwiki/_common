@@ -1,0 +1,15 @@
+{%comment%}
+    Displays a list of all teams in a collection
+{%endcomment%}
+
+{% include teams_index.html %}
+
+{% assign team_pages = include.collection | sort: 'number' %}
+
+<!-- TODO: better styling -->
+<ul>
+    {% for page in team_pages %}
+        <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.team.number }}</a> - <a href="{{ page.team.links.Website }}">{{ page.team.name }}</a> - {{ page.team.location }}</li>
+    {% endfor %}
+</ul>
+

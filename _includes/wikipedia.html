@@ -1,0 +1,14 @@
+{%comment%}
+    Displays a link to wikipedia:
+    
+    {% include wikipedia.html article="Thing" %}
+    
+    TODO: support multiple languages
+{%endcomment%}
+
+<div class="alert alert-info" role="alert">
+    Read more about 
+    <a class="alert-link" href="http://en.wikipedia.org/wiki/{{ include.topic | replace: ' ','_' }}">{{ include.topic }}</a>
+    on wikipedia.
+</div>
+

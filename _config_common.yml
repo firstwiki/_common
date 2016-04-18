@@ -1,0 +1,5 @@
+collections:
+  common:
+    output: true
+    permalink: /common/:path
+
