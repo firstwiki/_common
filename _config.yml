@@ -19,7 +19,7 @@ author:
 title:            FIRSTwiki
 tagline:          The FIRST Robotics encyclopedia
 paginate:         5
-safe:             false
+safe:             true
 
 data_dir:         _data
 includes_dir:     _includes
