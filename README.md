@@ -1,5 +1,5 @@
-FIRSTwiki: theme
-================
+FIRSTwiki: common files
+=======================
 
 FIRSTwiki is an open-content encyclopedia about the FIRST Robotics Competition,
 designed to provide a useful resource for all aspects of the FIRST community.
