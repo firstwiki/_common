@@ -1,0 +1,3 @@
+[
+{% assign team_pages = include.collection | sort: 'number' %}{% assign first = 0 %}{% for page in team_pages %}{% if page.robot_code %}{% if first == 0 %}{% assign first = 1 %}{% else %},{% endif %}{"team":{{ page.team.number }},"github":"{{ page.team.links.Github | escape}}","code":{{ page.robot_code | jsonify }}}{% endif %}{% endfor %}
+]
