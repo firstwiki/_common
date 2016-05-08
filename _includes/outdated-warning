@@ -1,0 +1,11 @@
+{%comment%}
+    Displays a notice that this section of an article contains information that
+    while may be useful, is most likely outdated.
+    
+    {% include outdated %}
+    
+{%endcomment%}
+
+<div class="alert alert-danger">
+    The following information is most likely <strong>outdated</strong>. You can help FIRSTwiki by <a class="alert-link" href="/docs/contributing">updating the information</a>.
+</div>

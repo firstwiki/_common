@@ -1,0 +1,11 @@
+{%comment%}
+    Displays a notice that this article is a stub and should be updated. To add
+    this to a page, include the following:
+    
+    {% include stub %}
+    
+{%endcomment%}
+
+<div class="alert alert-warning">
+    This article is a <strong>stub</strong>. You can help FIRSTwiki by <a class="alert-link" href="/docs/contributing">expanding it</a>.
+</div>

@@ -1,0 +1,12 @@
+{%comment%}
+    Display a notice that a specific section of a page needs some more work.
+    
+    To add this to a page, include the following:
+    
+    {% include TODO %}
+    
+{%endcomment%}
+
+<div class="alert alert-warning">
+    This would be a great place to put some content! You can help FIRSTwiki by <a class="alert-link" href="/docs/contributing">adding more information here</a>.
+</div>

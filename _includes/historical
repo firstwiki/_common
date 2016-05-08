@@ -1,0 +1,14 @@
+{%comment%}
+    Displays a notice that this section of an article contains information that
+    is retained for historical reasons, and does not need to be updated.
+    
+    {% include historical %}
+    
+    This is different than outdated information that needs to be updated. That
+    should use the outdated-warning include instead.
+    
+{%endcomment%}
+
+<div class="alert alert-success">
+    The following information is outdated, but is retained for historical reasons
+</div>

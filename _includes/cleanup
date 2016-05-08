@@ -1,0 +1,11 @@
+{%comment%}
+    Displays a notice that this article is a bit messy and needs some love. To add
+    this to a page, include the following:
+    
+    {% include cleanup %}
+    
+{%endcomment%}
+
+<div class="alert alert-warning">
+    This article needs some <strong>cleanup</strong>. You can help FIRSTwiki by <a class="alert-link" href="/docs/contributing">editing it</a>.
+</div>

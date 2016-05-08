@@ -6,4 +6,10 @@ elif [ -f _config_common.yml ]; then
     CFG=",_config_common.yml"
 fi
 
-bundle exec jekyll serve --watch --config _config.yml${CFG} --incremental "$@"
+INCREMENTAL="--incremental"
+if [ "$1" == "--full" ]; then
+    shift
+    INCREMENTAL=""
+fi
+
+bundle exec jekyll serve --watch --config _config.yml${CFG} $INCREMENTAL "$@"

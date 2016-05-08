@@ -1,0 +1,12 @@
+{%comment%}
+    Displays a notice that this article is a disputed and should be updated. To add
+    this to a page, include the following:
+    
+    % include POV %
+    
+    TODO: support linking to an appropriate github issue where it can be discussed?
+{%endcomment%}
+
+<div class="alert alert-warning" role="alert">
+    This article's <strong>factual accuracy</strong> or <strong>neutrality</strong> is disputed.
+</div>

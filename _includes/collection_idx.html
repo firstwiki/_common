@@ -1,0 +1,10 @@
+{%comment%}
+    Generically lists all articles in a collection
+    
+    {% assign docs = site.collections['foo'] %}
+    {% include collection_idx.html collection=docs %}
+{%endcomment%}
+
+{% assign docs = include.collection | sort: 'title' %}
+{% for doc in docs %}{% if doc.layout != 'redirect' %}* [{{ doc.title }}]({{ site.baseurl }}{{ doc.url }}) {% endif %}
+{% endfor %}

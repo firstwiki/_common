@@ -1,7 +1,7 @@
 {%comment%}
     Displays a link to wikipedia:
     
-    {% include wikipedia.html article="Thing" %}
+    {% include wikilink topic="Thing" %}
     
     TODO: support multiple languages
 {%endcomment%}
