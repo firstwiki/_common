@@ -38,6 +38,11 @@
 <script>
   $(document).ready(function(){
     $('.dropdown-toggle').dropdown();
+    $('table').each(function() {
+      if ($(this).attr('class') === undefined) {
+        $(this).attr('class', 'table table-bordered table-condensed');
+      }
+    });
   });
 </script>
 
