@@ -1,0 +1,10 @@
+{%comment%}
+    Generically lists all articles in a collection that have a single tag
+    
+    {% assign docs = site.collections['foo'] %}
+    {% include collection_idx.html collection=docs tag="tag" %}
+{%endcomment%}
+
+{% assign docs = include.collection | sort: 'title' %}
+{% for doc in docs %}{% if doc.tags contains include.tag %}* [{{ doc.title }}]({{ site.baseurl }}{{ doc.url }}) {% endif %}
+{% endfor %}
