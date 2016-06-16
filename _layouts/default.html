@@ -7,9 +7,22 @@
 
     <div class="container content">
       <header>
-         <h1><a href="{% if jekyll.environment == "production" %}/{% else %}{{ site.baseurl }}/{% endif %}" title="Home">FIRSTwiki</a>
-          <small>{{ site.tagline }}</small>
-        </h1>
+        <div class="row">
+            <h1 class="col-md-9"><a href="{% if jekyll.environment == "production" %}/{% else %}{{ site.baseurl }}/{% endif %}" title="Home">FIRSTwiki</a>
+                <small>{{ site.tagline }}</small>
+            </h1>
+
+            <div class="col-md-3 h1">
+                <form role="search" method="get" action="{{site.baseurl}}/search/">
+                    <div class="input-group">
+                        <input id="searchString" name="q" type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button type="submit" aria-label="Submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
         
         <!-- TODO: this needs vast improvement -->
         <nav class="navbar">
