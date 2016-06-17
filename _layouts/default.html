@@ -3,6 +3,8 @@
 
   {% include head.html %}
 
+  <script src="{{ site.baseurl }}/common/js/default.js"></script>
+
   <body>
 
     <div class="container content">
@@ -51,7 +53,7 @@
                   <a href="{{ site.github.repository_url }}/edit/{{ page_path }}"><span class="octicon octicon-mark-github"></span> Edit on GitHub</a>
               </li>
               <li class="navbar-right">
-                  <a href="https://raw.githubusercontent.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}/{{ page_path }}">View Source</a>
+                  <a class="raw_source" href="https://raw.githubusercontent.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}/{{ page_path }}">View Source</a>
               </li>
           </ul>
         </nav>        
