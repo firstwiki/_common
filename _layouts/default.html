@@ -3,7 +3,11 @@
 
   {% include head.html %}
 
+{% if jekyll.environment == "production" %}
+  <script src="/common/js/default.js"></script>
+{% else %}
   <script src="{{ site.baseurl }}/common/js/default.js"></script>
+{% endif %}
 
   <body>
 
