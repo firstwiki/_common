@@ -1,3 +1,6 @@
+---
+permalink: /common/js/default.js
+---
 "use strict";
 
 $(document).ready(function(){
