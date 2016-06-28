@@ -1,0 +1,35 @@
+---
+layout: page
+---
+
+{%comment%}
+    Use this layout for rendering software projects in a consistent manner.
+    
+    Supported front matter data:
+    
+    project:
+      name:
+      language:
+      created:
+      creator:
+      maintainer:
+      sourcecode:
+      website:
+    
+{%endcomment%}
+
+{% assign project = page.project %}
+
+<div class="panel panel-default pull-right" style="width: 300px">
+    <div class="panel-heading">{{ project.name }}</div>
+    <table class="table">
+        {% if project.language %}<tr><td>Language:</td><td>{{ project.language }}</td></tr>{% endif %}
+        {% if project.created %}<tr><td>Created:</td><td>{{ project.created }}</td></tr>{% endif %}
+        {% if project.creator %}<tr><td>Creator:</td><td>{{ project.creator }}</td></tr>{% endif %}
+        {% if project.maintainer %}<tr><td>Maintainer:</td><td>{{ project.maintainer }}</td></tr>{% endif %}
+        {% if project.sourcecode %}<tr><td>Source:</td><td><a href="{{ project.sourcecode }}">{{ project.sourcecode }}</a></td></tr>{% endif %}
+        {% if project.website %}<tr><td>Website:</td><td><a href="{{ project.website }}">{{ project.website }}</a></td></tr>{% endif %}
+    </table>
+</div>
+
+{{ content }}
