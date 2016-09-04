@@ -2,7 +2,7 @@
     Displays a notice that this section of an article contains information that
     while may be useful, is most likely outdated.
     
-    {% include outdated %}
+    {% include outdated-warning %}
     
 {%endcomment%}
 

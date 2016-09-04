@@ -1,7 +1,11 @@
 {%comment%}
-    Displays a link to wikipedia:
+    FIRSTwiki is not meant to replace something like Wikipedia, but rather it is
+    meant to supplement it with FIRST-specific information. When you want to provide
+    a pointer to a wikipedia page as the primary source of information, use this
+    include. For normal references, use the same mechanism as any other external
+    links.
     
-    {% include wikilink topic="Thing" %}
+    {% include wikilink topic="Topic" %}
     
     TODO: support multiple languages
 {%endcomment%}
