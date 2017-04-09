@@ -3,3 +3,6 @@ collections:
     output: true
     permalink: /common/:path
 
+# development plugin
+plugins_dir: _common/_plugins
+
