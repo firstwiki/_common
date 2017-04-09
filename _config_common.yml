@@ -6,3 +6,19 @@ collections:
 # development plugin
 plugins_dir: _common/_plugins
 
+# github pages defaults
+# -> include these instead of using the github pages gem, as that breaks development
+# -> https://github.com/github/pages-gem/blob/master/lib/github-pages/configuration.rb
+lsi: false
+highlighter: rouge
+kramdown:
+  gfm_quirks: paragraph_end
+  hard_wrap: false
+  input: "GFM"
+  template:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  
+gist:
+  noscript: false
+  
