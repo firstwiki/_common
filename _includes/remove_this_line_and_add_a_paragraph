@@ -1,0 +1,20 @@
+{%comment%}
+    Displays a notice that this article is a stub and should be updated. To add
+    this to a page, include the following:
+    
+    {% include remove_this_line_and_add_a_paragraph %}
+    
+{%endcomment%}
+
+{% capture page_path %}{% if site.github.is_project_page %}gh-pages{% else %}master{% endif %}{{ page.dir }}/{{ page.path }}{% endcapture %}
+
+<div class="alert alert-warning">
+    <p>
+        Nobody has uploaded text about this team, so this placeholder is here instead.
+        If this is your team, you can help FIRSTwiki by
+        <a class="alert-link" href="/docs/style-guide-teampages">adding information about your team</a>.
+    </p>
+    <p>
+        <a class="btn btn-default" href="{{ site.github.repository_url }}/edit/{{ page_path }}"><span class="octicon octicon-mark-github"></span> Edit on GitHub</a>
+    </p>
+</div>
