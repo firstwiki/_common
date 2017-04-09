@@ -30,8 +30,9 @@ robotCodeType = {
   "type" => "array",
   "items" => [stringType, {
     "type" => "string",
-    "enum" => ["Arduino", "C++", "C", "HTML", "Javascript", "Java", "LabVIEW",
-               "PBASIC", "PHP", "Python", "Ruby", "Scala"]
+    "enum" => ["Android", "Arduino", "C++", "C", "C#", "F#", "HTML", "Javascript",
+               "Java", "LabVIEW", "LaTeX", "PBASIC", "PHP", "Python", "RoboRealm",
+               "Ruby", "Scala"]
   }],
   "additionalItems" => false,
 }
@@ -52,6 +53,7 @@ schema = {
         "name" => nullOrString,
         "rookie_year" => nullOrInt,
         "location" => nullOrString,
+        "district" => stringType,
         "sponsors" => stringArrayType,
         "links" => {
           "type" => "object",
@@ -72,9 +74,11 @@ schema = {
               "Dashboard" => robotCodeType,
               "Lights" => robotCodeType,
               "Robot" => robotCodeType,
+              "Practice Robot" => robotCodeType,
               "Scouting" => robotCodeType,
               "UI" => robotCodeType,
               "Vision" => robotCodeType,
+              "VR" => robotCodeType,
             },
             "additionalProperties" => false  
           }
