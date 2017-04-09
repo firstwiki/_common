@@ -12,4 +12,7 @@ if [ "$1" == "--full" ]; then
     INCREMENTAL=""
 fi
 
+# weird bug in jekyll
+rm -f _site/run_server.sh _site/_common/run_server.sh
+
 bundle exec jekyll serve --watch --config _config.yml${CFG} $INCREMENTAL "$@"

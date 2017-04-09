@@ -7,6 +7,9 @@ elif [ -f _config_common.yml ]; then
     CFG=",_config_common.yml"
 fi
 
+# weird bug in jekyll
+rm -f _site/run_server.sh _site/_common/run_server.sh
+
 bundle exec jekyll build --config _config.yml${CFG}
 
 # TODO: would like to use this, but need a clever way for validation to work
