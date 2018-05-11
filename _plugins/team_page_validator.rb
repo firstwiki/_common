@@ -31,8 +31,8 @@ robotCodeType = {
   "items" => [stringType, {
     "type" => "string",
     "enum" => ["Android", "Arduino", "C++", "C", "C#", "F#", "HTML", "Javascript",
-               "Java", "LabVIEW", "LaTeX", "PBASIC", "PHP", "Python", "RoboRealm",
-               "Ruby", "Scala"]
+               "Java", "Kotlin", "LabVIEW", "LaTeX", "PBASIC", "PHP", "Python", "RoboRealm",
+               "Ruby", "Scala", "Swift"]
   }],
   "additionalItems" => false,
 }
@@ -80,7 +80,7 @@ schema = {
               "Vision" => robotCodeType,
               "VR" => robotCodeType,
             },
-            "additionalProperties" => false  
+            "additionalProperties" => false
           }
         }
       },
