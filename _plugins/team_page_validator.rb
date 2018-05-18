@@ -74,6 +74,7 @@ schema = {
               "Dashboard" => robotCodeType,
               "Lights" => robotCodeType,
               "Robot" => robotCodeType,
+              "Robot (other)" => robotCodeType,
               "Practice Robot" => robotCodeType,
               "Scouting" => robotCodeType,
               "Simulation" => robotCodeType,
