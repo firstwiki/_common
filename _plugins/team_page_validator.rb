@@ -31,7 +31,7 @@ robotCodeType = {
   "items" => [stringType, {
     "type" => "string",
     "enum" => ["Android", "Arduino", "C++", "C", "C#", "F#", "Golang", "HTML", "Javascript",
-               "Java", "JavaScript", "Kotlin", "LabVIEW", "LaTeX", "PBASIC", "PHP",
+               "Java", "Kotlin", "LabVIEW", "LaTeX", "Lua", "PBASIC", "PHP",
                "Python", "RoboRealm", "Ruby", "Rust", "Scala", "Swift"]
   }],
   "additionalItems" => false,
