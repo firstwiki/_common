@@ -30,7 +30,7 @@ robotCodeType = {
   "type" => "array",
   "items" => [stringType, {
     "type" => "string",
-    "enum" => ["Android", "Arduino", "C++", "C", "C#", "F#", "Golang", "HTML", "Javascript",
+    "enum" => ["Android", "Arduino", "C++", "C", "C#", "F#", "Golang", "HTML", "JavaScript",
                "Java", "Kotlin", "LabVIEW", "LaTeX", "Lua", "PBASIC", "PHP",
                "Python", "RoboRealm", "Ruby", "Rust", "Scala", "Swift"]
   }],
